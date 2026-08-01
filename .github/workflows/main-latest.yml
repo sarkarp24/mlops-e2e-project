@@ -53,3 +53,25 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/prodyot-mlops830ui:latest
           no-cache: true
+
+ # =============================
+  # JOB 2: Deploy to Kubernetes
+  # =============================
+  deploy:  
+    name: Deploy to Kubernetes
+    runs-on: self-hosted
+    needs: build
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup kubectl
+      run: |
+        mkdir -p ~/.kube
+        echo "${{ secrets.USER_KUBE_CONFIG_DATA }}" > ~/.kube/config
+
+
+    - name: Deploy to Kubernetes
+      run: |
+        kubectl apply -f k8s/api-deployment.yaml
