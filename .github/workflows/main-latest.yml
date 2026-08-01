@@ -74,6 +74,11 @@ jobs:
         mkdir -p ~/.kube
         echo "${{ secrets.USER_KUBE_CONFIG_DATA }}" > ~/.kube/config
 
+    - name: Debug File Content
+      run: |
+        pwd
+        ls -la k8s/   # or ls -la kubernetes/
+        cat k8s/api-deployment.yaml
 
     - name: Deploy to Kubernetes
       run: |
