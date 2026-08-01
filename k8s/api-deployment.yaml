@@ -1,3 +1,7 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prodyot-api-deploy
 spec:
   replicas: 1
   selector:
