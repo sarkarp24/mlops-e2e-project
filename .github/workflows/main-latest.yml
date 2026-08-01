@@ -54,7 +54,7 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/prodyot-mlops830ui:latest
           no-cache: true
 
- # =============================
+  # =============================
   # JOB 2: Deploy to Kubernetes
   # =============================
   deploy:  
