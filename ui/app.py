@@ -1,8 +1,13 @@
 import streamlit as st
 import requests
+import os
 
 # ⚠️ When running locally
-API_URL = "http://localhost:8000/predict"
+#API_URL = "http://localhost:8000/predict"
+
+# Reads API_HOST env var, defaults to 'loksai-api-svc'
+API_HOST = os.getenv("API_HOST", "loksai-api-svc")
+API_URL = f"http://{API_HOST}:8000/predict"
 
 st.title("Loksai MLOps Feedback Analyzer")
 
