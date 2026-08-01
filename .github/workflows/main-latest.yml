@@ -40,7 +40,7 @@ jobs:
           file: docker/Dockerfile.api
           platforms: linux/arm64
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/loksai-mlops830api:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/prodyot-mlops830api:latest
           no-cache: true
 
       # Automatically builds and pushes the ARM64 UI image
@@ -51,5 +51,5 @@ jobs:
           file: docker/Dockerfile.ui
           platforms: linux/arm64
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/loksai-mlops830ui:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/prodyot-mlops830ui:latest
           no-cache: true
