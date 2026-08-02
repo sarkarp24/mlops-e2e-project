@@ -3,4 +3,4 @@
 ['remote "s3remote"']
     url = s3://loksai-edu-mlproject1
 ['remote "myremote"']
-    url = s3://prodyot-edu-mlproject1
+    url = s3://prodyot-edu-mlproject
