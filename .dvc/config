@@ -1,6 +1,6 @@
 [core]
-    remote = myremote
-['remote "s3remote"']
-    url = s3://loksai-edu-mlproject1
+    remote = myremote-data
 ['remote "myremote"']
     url = s3://prodyot-edu-mlproject
+['remote "myremote-data"']
+    url = s3://prodyot-edu-data-mlproject
