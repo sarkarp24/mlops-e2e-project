@@ -11,24 +11,27 @@ stages:
   preprocess:
     cmd: python src/preprocessing.py
     deps:
-    - path: data/raw/reviews.csv
+    - path: s3://prodyot-edu-data-mlproject/data/raw/reviews.csv
       hash: md5
-      md5: 5baab0b5aa0ab243ed00db96cb5e2a2e
+      etag: 5baab0b5aa0ab243ed00db96cb5e2a2e
       size: 1695
+      version_id: zrPpRgvIlbqIwC65rRqvL_xLrFR_LZ09
     outs:
-    - path: data/processed/clean.csv
+    - path: s3://prodyot-edu-data-mlproject/data/processed/clean.csv
       hash: md5
-      md5: 70be7b9d47535858d04eb22242ce9ecd
+      etag: 70be7b9d47535858d04eb22242ce9ecd
       size: 1692
+      version_id: htPa8JmgjpcdXofiOCaIMhOtISIhXZRy
   train:
     cmd: python src/train.py
     deps:
-    - path: data/processed/clean.csv
+    - path: s3://prodyot-edu-data-mlproject/data/processed/clean.csv
       hash: md5
-      md5: 70be7b9d47535858d04eb22242ce9ecd
+      etag: 70be7b9d47535858d04eb22242ce9ecd
       size: 1692
+      version_id: htPa8JmgjpcdXofiOCaIMhOtISIhXZRy
     outs:
     - path: models/model.pkl
       hash: md5
-      md5: 961840dbc99a1798eb4960599db5896e
+      md5: 8e8236bf49c9d6c29a8a0c2cd8734b9c
       size: 6590
