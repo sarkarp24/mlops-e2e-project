@@ -3,3 +3,11 @@ outs:
   size: 1695
   hash: md5
   path: reviews.csv
+md5: 1d43833fa5ff4cdb4b3e6e116be6a589
+frozen: true
+deps:
+- etag: 5baab0b5aa0ab243ed00db96cb5e2a2e
+  size: 1695
+  version_id: zrPpRgvIlbqIwC65rRqvL_xLrFR_LZ09
+  hash: md5
+  path: s3://prodyot-edu-data-mlproject/data/raw/reviews.csv
