@@ -3,10 +3,11 @@ stages:
   validate:
     cmd: python src/data_validation.py
     deps:
-    - path: data/raw/reviews.csv
+    - path: s3://prodyot-edu-data-mlproject/data/raw/reviews.csv
       hash: md5
-      md5: 5baab0b5aa0ab243ed00db96cb5e2a2e
+      etag: 5baab0b5aa0ab243ed00db96cb5e2a2e
       size: 1695
+      version_id: zrPpRgvIlbqIwC65rRqvL_xLrFR_LZ09
   preprocess:
     cmd: python src/preprocessing.py
     deps:

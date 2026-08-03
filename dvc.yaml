@@ -10,6 +10,7 @@ stages:
       - s3://prodyot-edu-data-mlproject/data/raw/reviews.csv
     outs:
       - s3://prodyot-edu-data-mlproject/data/processed/clean.csv:
+          cache: false
           persist: true
 
   train:
